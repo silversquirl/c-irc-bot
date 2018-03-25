@@ -2,7 +2,7 @@
 .PHONY: all clean
 
 CC := gcc
-CFLAGS := -Wall -Werror
+CFLAGS := -fPIC -Wall -Werror
 LDFLAGS := -ldl
 
 all: bot
@@ -13,7 +13,7 @@ bot: main.o module.so
 	$(CC) $(LDFLAGS) -o $@ $<
 
 %.so: %.o
-	$(CC) $(LDFLAGS) -fPIC -shared -o $@ $<
+	$(CC) $(LDFLAGS) -shared -o $@ $<
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $<
