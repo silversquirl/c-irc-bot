@@ -16,6 +16,6 @@ language for processing text. A scripting language like Python, Ruby or
 Perl is a much better choice.
 
 Secondly, `dlopen` is almost *never* a good idea. There are many things
-that can break at a moments notice because someone moved or deleted
+that can break at a moment's notice because someone moved or deleted
 something they shouldn't, and there's usually a better way of doing things
 than dynamic loading.
